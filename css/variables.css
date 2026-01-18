@@ -47,8 +47,8 @@
   /* =====================
    Images
    ===================== */
-  --image-sm: 48px;
-  --image-md: 96px;
-  --image-lg: 144px;
-  --image-xl: 192px;
+  --image-sm: 32px;
+  --image-md: 64px;
+  --image-lg: 96px;
+  --image-xl: 128px;
 }

@@ -16,7 +16,6 @@
 
 /* Header */
 .about__header {
-  text-align: center;
   margin-bottom: var(--space-lg);
 }
 
@@ -29,7 +28,10 @@
   font-size: var(--font-size-lg);
 }
 
-/* Main About Card */
+/* =====================
+   Main About Card
+   ===================== */
+
 .about__content {
   max-width: 80%;
   margin: 0 auto;
@@ -63,7 +65,6 @@
 
 .about__cta {
   font-weight: var(--font-weight-bold);
-  text-align: center;
   margin-top: var(--space-lg);
 }
 
@@ -74,7 +75,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: var(--space-lg);
 }
 
@@ -93,7 +93,6 @@
 
 .about__badges {
   margin-top: var(--space-xl);
-  text-align: center;
   border-top: 2px solid var(--color-text-dark);
 }
 
@@ -102,43 +101,46 @@
   margin-bottom: var(--space-lg);
 }
 
-/* Grid-based badges layout */
 .about__badges-grid {
   display: grid;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
+
+  padding-inline: var(--space-sm);
+
   width: 100%;
   box-sizing: border-box;
+  justify-items: stretch;
 
-  /* Mobile default: 1 badge per row */
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: 1fr;
 }
 
-/* Medium screens: 2 badges per row */
-@media (min-width: 801px) and (max-width: 1299px) {
+@media (min-width: 801px) {
   .about__badges-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Large screens: 4 badges per row */
 @media (min-width: 1300px) {
   .about__badges-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Badge card */
+/* =====================
+   Badge Card
+   ===================== */
+
 .badge {
   background: var(--color-secondary);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease,
-    background-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   opacity: 0;
   transform: translateY(12px);
   animation: badgeFadeIn 0.9s ease forwards;
-  min-width: fit-content;
 }
 
 @keyframes badgeFadeIn {
@@ -167,7 +169,6 @@
 }
 
 .badge strong {
-  min-width: 230px;
   display: block;
   margin-bottom: var(--space-xs);
   border-bottom: 2px solid var(--color-text-dark);
@@ -180,12 +181,14 @@
 .badge__image,
 .badge__image img {
   height: var(--image-lg);
-  margin: auto;
-  margin-bottom: var(--space-sm);
+  margin: 0 auto var(--space-sm);
   border-radius: var(--radius-sm);
 }
 
-/* Container adjustments */
+/* =====================
+   Responsive Tweaks
+   ===================== */
+
 @media (max-width: 1024px) {
   .about__container {
     max-width: 90vw;
@@ -196,7 +199,6 @@
   }
 }
 
-/* Mobile adjustments */
 @media (max-width: 600px) {
   .about__container {
     max-width: 100%;
@@ -204,15 +206,10 @@
 
   .about__content {
     padding: var(--space-md);
-    text-align: center;
   }
 
   .about__features {
     gap: var(--space-sm);
-  }
-
-  .badge {
-    max-width: 80%;
   }
 
   .about__content:hover,

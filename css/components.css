@@ -5,11 +5,12 @@
   background: var(--color-primary);
   color: var(--color-text-dark);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--color-accent);
+  max-height: 160px;
 }
 
 .container {
   max-width: 80vw;
-  margin: 0 auto;
   padding: 0 var(--space-sm);
   padding-top: var(--space-md);
 }
@@ -22,9 +23,9 @@
 }
 
 .logo {
-  height: 80px;
-  width: auto;
+  height: var(--image-lg);
   border-radius: 50%;
+  margin: auto 0 auto 0;
 }
 
 /* =====================
@@ -51,30 +52,22 @@
   cursor: pointer;
   padding: var(--space-xs) var(--space-sm);
   width: 130px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .main-nav button:hover,
 .lang-button:hover {
-  background: var(--color-accent);
-  color: var(--color-text-dark);
-}
-
-.main-nav button.active {
   background: var(--color-secondary);
   color: var(--color-text-dark);
 }
 
-.lang-button {
-  border: none;
-  margin: 0;
+.main-nav button.active {
+  background: var(--color-accent);
+  color: var(--color-text-dark);
 }
 
-/* =====================
-   Fix mystery 1px line
-   ===================== */
-.site-header,
-.site-header * {
-  border-bottom: none !important;
+.lang-button {
+  margin: 0;
 }
 
 /* =====================
@@ -170,6 +163,8 @@
   background: var(--color-text-dark);
   padding-block: var(--space-md);
   color: var(--color-secondary);
+  box-shadow: 0 -10px 18px rgba(0, 0, 0, 0.4);
+  border-top: 2px solid var(--color-accent);
 }
 
 .footer-inner {

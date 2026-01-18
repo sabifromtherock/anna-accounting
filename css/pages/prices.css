@@ -12,6 +12,8 @@
 
 .prices-intro {
   padding: 0 var(--space-xl);
+  margin: auto;
+  width: 80%;
 }
 
 .price-list {
@@ -39,7 +41,9 @@
   opacity: 0;
   transform: translateY(12px);
   animation: priceFadeIn 0.9s ease forwards;
-  transition: transform 0.5s ease, box-shadow 0.5s ease,
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease,
     background-color 0.5s ease;
   width: 100%;
   max-width: 900px;
@@ -106,6 +110,7 @@
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   border-radius: var(--radius-md);
+  border: 2px groove var(--color-primary);
   transition: background-color 0.3s ease;
 }
 
