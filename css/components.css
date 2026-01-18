@@ -1,0 +1,178 @@
+/* =====================
+   Header
+   ===================== */
+.site-header {
+  background: var(--color-primary);
+  color: var(--color-text-dark);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+  padding-top: var(--space-md);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* =====================
+   Navigation
+   ===================== */
+.nav-inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-nav button,
+.lang-button {
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  padding: var(--space-xs) var(--space-sm);
+  width: 130px;
+}
+
+.main-nav button:hover,
+.lang-button:hover {
+  background: var(--color-accent);
+  color: var(--color-text-dark);
+}
+
+.main-nav button.active {
+  background: var(--color-secondary);
+  color: var(--color-text-dark);
+}
+
+.lang-button {
+  border: none;
+  margin: 0;
+}
+
+/* =====================
+   Fix mystery 1px line
+   ===================== */
+.site-header,
+.site-header * {
+  border-bottom: none !important;
+}
+
+/* =====================
+   Burger Button
+   ===================== */
+.burger {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--color-text-light);
+  margin: 6px 0;
+}
+
+/* =====================
+   Overlay
+   ===================== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 900;
+}
+
+/* =====================
+   Mobile Popup Menu
+   ===================== */
+.mobile-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: var(--color-primary);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mobile-menu button {
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-sm);
+  cursor: pointer;
+}
+
+.mobile-menu button:hover {
+  background: var(--color-accent);
+  color: var(--color-text-dark);
+  border-radius: var(--radius-sm);
+}
+
+/* =====================
+   Responsive Rules
+   ===================== */
+@media (max-width: 1024px) {
+  .nav-inner {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+/* =====================
+   Footer
+   ===================== */
+.site-footer {
+  background: var(--color-text-dark);
+  padding-block: var(--space-md);
+  color: var(--color-secondary);
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: var(--font-size-sm);
+}
