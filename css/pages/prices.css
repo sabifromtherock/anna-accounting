@@ -10,6 +10,10 @@
   text-align: center;
 }
 
+.prices-intro {
+  padding: 0 var(--space-xl);
+}
+
 .price-list {
   list-style: none;
   padding: 0;
