@@ -43,4 +43,12 @@
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
+
+  /* =====================
+   Images
+   ===================== */
+  --image-sm: 48px;
+  --image-md: 96px;
+  --image-lg: 144px;
+  --image-xl: 192px;
 }

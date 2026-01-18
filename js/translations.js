@@ -18,7 +18,7 @@ const translations = {
     about_paragraph5:
       "I’m AAT-licensed, fully insured, and supervised for anti-money laundering purposes by the Association of Accounting Technicians (AAT), so you can be confident your accounts are in safe hands.",
     about_paragraph6:
-      "👉 Friendly service, clear advice, and personal support — every step of the way.",
+      "Friendly service, clear advice, and personal support — every step of the way.",
     about_paragraph7:
       "Get to know <a href='#services'>my services</a> or <a href='#contact'>get in touch</a>, and let’s see how I can help with your accounting needs.",
     about_paragraph8: "✔ UK-wide remote services",
@@ -180,7 +180,7 @@ const translations = {
     about_paragraph5:
       "AAT által minősített könyvelő vagyok, teljes körű felelősségbiztosítással rendelkezem, és az Association of Accounting Technicians felügyelete alatt állok a pénzmosás elleni szabályok betartása érdekében.",
     about_paragraph6:
-      "👉 Barátságos hozzáállás, érthető tanácsadás és személyes támogatás – minden lépésnél.",
+      "Barátságos hozzáállás, érthető tanácsadás és személyes támogatás – minden lépésnél.",
     about_paragraph7:
       'Ismerd meg <a href="#services">szolgáltatásaimat</a>, vagy <a href="#contact">vedd fel velem a kapcsolatot</a>, és nézzük meg, hogyan segíthetek a könyvelési feladatokban.',
     about_paragraph8:
