@@ -1,0 +1,175 @@
+/* =====================
+   Contact – Column Cards
+   ===================== */
+
+.contact-box {
+  max-width: 80vw;
+  text-align: center;
+  background-color: var(--color-primary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+}
+
+.contact-details {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  font-style: normal;
+}
+
+/* Card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-secondary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: cardFadeIn 0.9s ease forwards;
+}
+
+/* Stagger effect */
+.contact-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.contact-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.contact-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.contact-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.contact-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.contact-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-card:hover,
+.contact-card:focus-within {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Icon animation */
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.5) rotate(-10deg);
+}
+
+/* Location card */
+.contact-location {
+  cursor: default;
+  background-color: var(--color-secondary);
+}
+
+.contact-location:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-dark);
+  transform: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* =====================
+   Tablet (≤ 1024px)
+   ===================== */
+@media (max-width: 1024px) {
+  .contact-box {
+    max-width: 85vw;
+    padding: var(--space-md);
+  }
+
+  .contact-details {
+    gap: var(--space-md);
+  }
+
+  .contact-card {
+    padding: var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* =====================
+   Mobile (≤ 600px)
+   ===================== */
+@media (max-width: 600px) {
+  .contact-box {
+    max-width: 100%;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  .contact-details {
+    gap: var(--space-sm);
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Reduce motion on small devices */
+  .contact-card {
+    animation-duration: 0.6s;
+  }
+
+  .contact-card:hover {
+    transform: none;
+  }
+}
+
+/* =====================
+   Reduced Motion (Accessibility)
+   ===================== */
+@media (prefers-reduced-motion: reduce) {
+  .contact-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .contact-card:hover .contact-icon {
+    transform: none;
+  }
+}
