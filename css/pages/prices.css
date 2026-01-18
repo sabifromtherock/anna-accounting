@@ -1,0 +1,33 @@
+/* =====================
+   Prices
+   ===================== */
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.price-card {
+  padding: var(--space-lg);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.price-card .price {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  margin: var(--space-sm) 0;
+}
+
+.price-card.featured {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.prices-cta {
+  background: var(--color-primary);
+  margin-top: var(--space-lg);
+  text-align: center;
+}
