@@ -229,6 +229,17 @@
   }
 }
 
+@media (max-width: 1023px) and (orientation: landscape) {
+  .site-header {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+
+  .site-header.hidden {
+    transform: translateY(-100%);
+  }
+}
+
 /* =====================
    Overlay
    ===================== */
@@ -319,4 +330,12 @@
 .footer-inner {
   text-align: center;
   font-size: var(--font-size-sm);
+}
+
+@media (max-width: 1023px) {
+  .site-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+  }
 }
