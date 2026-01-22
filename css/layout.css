@@ -10,4 +10,5 @@
 
 .page-section {
   display: none;
+  scroll-margin-top: var(--header-height);
 }

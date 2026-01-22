@@ -35,6 +35,9 @@
   --space-md: 1rem;
   --space-lg: 2rem;
   --space-xl: 4rem;
+  --header-height: 130px;
+  --header-height-mobile: 80px;
+  --footer-height: 80px;
 
   /* =====================
      Layout

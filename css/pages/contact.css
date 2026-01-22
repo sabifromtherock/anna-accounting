@@ -2,6 +2,10 @@
    Contact – Column Cards
    ===================== */
 
+.contact {
+  padding-bottom: var(--footer-height);
+}
+
 .contact-box {
   max-width: 80vw;
   text-align: center;

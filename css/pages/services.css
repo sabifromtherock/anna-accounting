@@ -2,18 +2,30 @@
    Services – Column Cards
    ===================== */
 
+.services {
+  padding-bottom: var(--footer-height);
+}
+
 .services__container {
   max-width: 80vw;
   background-color: var(--color-primary);
   padding: var(--space-lg);
   border-radius: var(--radius-lg);
   align-content: center;
+  margin: 0 auto;
+}
+
+.services__container.container {
+  max-width: 100%;
+  padding-inline: 0;
+  padding: var(--space-md);
 }
 
 .services__header,
 .service .service__title,
 .service p {
   text-align: center;
+  padding-bottom: 0;
 }
 
 .services__grid {
@@ -22,6 +34,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
+  width: 100%;
 }
 
 .service__title,
@@ -39,7 +52,7 @@
 /* Service card */
 .service {
   width: 100%;
-  max-width: 80%;
+  max-width: 900px;
   background: var(--color-secondary);
   padding: var(--space-lg);
   border-radius: var(--radius-md);
@@ -48,7 +61,9 @@
   opacity: 0;
   transform: translateY(12px);
   animation: serviceFadeIn 0.9s ease forwards;
-  transition: transform 0.4s ease, box-shadow 0.4s ease,
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
     background-color 0.4s ease;
 }
 
