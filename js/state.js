@@ -27,10 +27,11 @@ const appState = {
     this.currentLang = lang;
     applyTranslations();
 
-    const langButton = document.getElementById("lang-toggle");
-    if (langButton) {
-      langButton.textContent = lang === "en" ? "🇭🇺 HU" : "🇬🇧 EN";
-    }
+    document
+      .querySelectorAll("#lang-toggle, #lang-toggle-mobile")
+      .forEach((btn) => {
+        btn.textContent = lang === "en" ? "🇭🇺 HU" : "🇬🇧 EN";
+      });
 
     // update URL without reloading page
     const currentHash = window.location.hash;
