@@ -1,0 +1,60 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <img
+        class="logo"
+        src="assets/images/company-logo.png"
+        alt="Anna's Accounting Services Logo"
+        id="logo"
+      />
+      <h1>ANNA'S ACCOUNTING SERVICES</h1>
+
+      <!-- Burger (mobile only) -->
+      <button
+        class="burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Desktop nav -->
+    <div class="nav-inner">
+      <nav class="main-nav" id="main-nav">
+        <button data-i18n="header_about" data-page="about"></button>
+        <button data-i18n="header_services" data-page="services"></button>
+        <button data-i18n="header_prices" data-page="prices"></button>
+        <button data-i18n="header_contact" data-page="contact"></button>
+        <button id="lang-toggle" class="lang-button"></button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay -->
+<div class="menu-overlay" hidden></div>
+
+<!-- Mobile popup menu -->
+<nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <button class="menu close" aria-label="Close menu">✕</button>
+  <button class="menu btn" data-i18n="header_about" data-page="about"></button>
+  <button
+    class="menu btn"
+    data-i18n="header_services"
+    data-page="services"
+  ></button>
+  <button
+    class="menu btn"
+    data-i18n="header_prices"
+    data-page="prices"
+  ></button>
+  <button
+    class="menu btn"
+    data-i18n="header_contact"
+    data-page="contact"
+  ></button>
+</nav>

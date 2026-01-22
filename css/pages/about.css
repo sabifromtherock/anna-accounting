@@ -1,0 +1,229 @@
+/* =====================
+   About Section
+   ===================== */
+
+.about {
+  padding-block: var(--space-xl);
+}
+
+.about__container {
+  max-width: 80vw;
+  margin: 0 auto;
+  background-color: var(--color-primary);
+  text-align: center;
+  border-radius: var(--radius-lg);
+}
+
+/* Header */
+.about__header {
+  margin-bottom: var(--space-lg);
+}
+
+.about__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.about__subtitle {
+  font-size: var(--font-size-lg);
+}
+
+/* =====================
+   Main About Card
+   ===================== */
+
+.about__content {
+  max-width: 80%;
+  margin: 0 auto;
+  background: var(--color-secondary);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  color: var(--color-text-dark);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: aboutFadeIn 0.9s ease forwards;
+}
+
+@keyframes aboutFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about__content p {
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.about__highlight {
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-md);
+  border-top: 2px solid var(--color-text-dark);
+}
+
+.about__cta {
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-lg);
+}
+
+/* Feature list */
+.about__features {
+  margin-top: var(--space-lg);
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.about__features li {
+  font-weight: var(--font-weight-bold);
+}
+
+.about__content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.9);
+}
+
+/* =====================
+   Badges Section
+   ===================== */
+
+.about__badges {
+  margin-top: var(--space-xl);
+  border-top: 2px solid var(--color-text-dark);
+}
+
+.about__badges-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.about__badges-grid {
+  display: grid;
+  gap: var(--space-sm);
+
+  padding-inline: var(--space-sm);
+
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: stretch;
+
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 801px) {
+  .about__badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
+  .about__badges-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =====================
+   Badge Card
+   ===================== */
+
+.badge {
+  background: var(--color-secondary);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: badgeFadeIn 0.9s ease forwards;
+}
+
+@keyframes badgeFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.badge:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.badge:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.badge:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.badge:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.9);
+}
+
+.badge strong {
+  display: block;
+  margin-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-text-dark);
+}
+
+.badge p {
+  font-size: var(--font-size-sm);
+}
+
+.badge__image,
+.badge__image img {
+  height: var(--image-lg);
+  margin: 0 auto var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+/* =====================
+   Responsive Tweaks
+   ===================== */
+
+@media (max-width: 1024px) {
+  .about__container {
+    max-width: 90vw;
+  }
+
+  .about__content {
+    padding: var(--space-md);
+  }
+}
+
+@media (max-width: 600px) {
+  .about__container {
+    max-width: 100%;
+  }
+
+  .about__content {
+    padding: var(--space-md);
+  }
+
+  .about__features {
+    gap: var(--space-sm);
+  }
+
+  .about__content:hover,
+  .badge:hover {
+    transform: none;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about__content,
+  .badge {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

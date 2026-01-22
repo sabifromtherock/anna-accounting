@@ -1,0 +1,10 @@
+@import "./variables.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./components.css";
+
+@import "pages/about.css";
+@import "pages/services.css";
+@import "pages/prices.css";
+@import "pages/contact.css";
+@import "pages/components.css";
