@@ -32,4 +32,30 @@ function initializeApp() {
   // Footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Header hide on scroll for landscape mobile
+  let lastScrollY = 0;
+  const header = document.querySelector(".site-header");
+
+  window.addEventListener("scroll", () => {
+    if (
+      window.matchMedia("(max-width: 1023px) and (orientation: landscape)")
+        .matches
+    ) {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // scrolling down → hide
+        header.classList.add("hidden");
+      } else {
+        // scrolling up → show
+        header.classList.remove("hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    } else {
+      // reset for other views
+      header.classList.remove("hidden");
+    }
+  });
 }
