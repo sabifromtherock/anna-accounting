@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: var(--header-height);
 }
 
 img {
@@ -37,5 +38,11 @@ a {
 #services,
 #prices,
 #contact {
-  flex: 1 0 auto; /* allow these sections to grow */
+  flex: 1 0 auto;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: var(--header-height-mobile);
+  }
 }

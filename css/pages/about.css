@@ -4,6 +4,7 @@
 
 .about {
   padding-block: var(--space-xl);
+  padding-bottom: var(--footer-height);
 }
 
 .about__container {
@@ -186,7 +187,7 @@
 }
 
 /* =====================
-   Responsive Tweaks
+   Responsive Views
    ===================== */
 
 @media (max-width: 1024px) {
@@ -206,6 +207,7 @@
 
   .about__content {
     padding: var(--space-md);
+    max-width: 100vw;
   }
 
   .about__features {
