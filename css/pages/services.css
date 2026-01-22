@@ -19,6 +19,7 @@
   max-width: 100%;
   padding-inline: 0;
   padding: var(--space-md);
+  padding-top: var(--space-lg);
 }
 
 .services__header,
