@@ -155,28 +155,6 @@
 }
 
 /* =====================
-   Mobile menu close button animation
-   ===================== */
-
-.menu.close {
-  margin: auto;
-  align-self: center;
-  background: none;
-  font-size: 1.8rem;
-  font-weight: bold;
-  cursor: pointer;
-  transform: rotate(0deg) scale(1);
-  transition:
-    transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-    color 0.3s ease;
-}
-
-.menu.close:hover {
-  transform: rotate(90deg) scale(1.1);
-  color: var(--color-accent);
-}
-
-/* =====================
    MOBILE LAYOUT (<1024px)
    ===================== */
 @media (max-width: 1023px) {
@@ -227,16 +205,9 @@
   .burger {
     display: block;
   }
-}
 
-@media (max-width: 1023px) and (orientation: landscape) {
-  .site-header {
-    transition: transform 0.3s ease;
-    will-change: transform;
-  }
-
-  .site-header.hidden {
-    transform: translateY(-100%);
+  .mobile-menu button.hide-on-current {
+    display: none;
   }
 }
 
@@ -285,7 +256,7 @@
   display: inline-block;
   padding: var(--space-sm) var(--space-md);
   color: var(--color-text-dark);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   border-radius: var(--radius-md);
@@ -298,17 +269,35 @@
   color: var(--color-text-light);
 }
 
-.menu.close {
-  background-color: var(--color-primary);
-  font-size: var(--font-size-xl);
-  color: var(--color-text-light);
-  padding: 0;
-}
+@media (max-width: 1023px) and (orientation: landscape) {
+  .site-header {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
 
-.mobile-menu.open {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  .site-header.hidden {
+    transform: translateY(-100%);
+  }
+
+  .mobile-menu,
+  .mobile-menu.open {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    gap: var(--space-md);
+    justify-self: center;
+    justify-items: center;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    width: fit-content;
+    max-width: none;
+  }
+
+  .mobile-menu button {
+    text-align: center;
+    width: 130px;
+  }
 }
 
 /* =====================
