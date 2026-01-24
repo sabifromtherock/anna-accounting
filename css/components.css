@@ -101,7 +101,7 @@
    Burger button
    ===================== */
 .burger {
-  margin-left: auto;
+  margin: auto;
   display: none;
   background: none;
   border: none;
@@ -121,20 +121,17 @@
    ===================== */
 
 .burger {
-  margin-left: auto;
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
 }
 
 .burger span {
   display: block;
-  width: 28px;
+  width: 40px;
   height: 3px;
   background: var(--color-text-light);
-  margin: 6px 0;
   border-radius: 2px;
   transition:
     transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
@@ -206,10 +203,6 @@
     display: block;
   }
 
-  .mobile-menu button.hide-on-current {
-    display: none;
-  }
-
   .mobile-menu {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -250,6 +243,27 @@
   }
   .mobile-menu.open button:nth-child(5) {
     transition-delay: 0.5s;
+  }
+
+  /* =====================
+   Mobile lang button below burger
+   ===================== */
+  .burger-lang-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+
+  .site-header .lang-button {
+    width: 70px;
+    background-color: var(--color-primary);
+    padding: var(--space-sm) 0 0;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .site-header .lang-button:hover {
+    background-color: var(--color-primary);
   }
 }
 

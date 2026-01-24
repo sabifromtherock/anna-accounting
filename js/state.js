@@ -20,17 +20,6 @@ const appState = {
     if (btn) btn.classList.add("active");
 
     window.location.hash = page;
-
-    // Hide the current page button in mobile menu
-    document
-      .querySelectorAll(".mobile-menu button[data-page]")
-      .forEach((btn) => {
-        if (btn.dataset.page === page) {
-          btn.classList.add("hide-on-current");
-        } else {
-          btn.classList.remove("hide-on-current");
-        }
-      });
   },
 
   setLang(lang) {

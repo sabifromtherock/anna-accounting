@@ -58,4 +58,42 @@ function initializeApp() {
       header.classList.remove("hidden");
     }
   });
+
+  // Mobile language button reposition
+  function updateMobileLangButton() {
+    const mobileLangBtn = document.getElementById("lang-toggle-mobile");
+    const headerContainer = document.querySelector(".site-header .container");
+    const burgerBtn = document.querySelector(".burger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (!mobileLangBtn || !headerContainer || !burgerBtn || !mobileMenu) return;
+
+    if (window.innerWidth < 1024) {
+      // Create a wrapper if it doesn't exist
+      let wrapper = document.querySelector(".burger-lang-wrapper");
+      if (!wrapper) {
+        wrapper = document.createElement("div");
+        wrapper.className = "burger-lang-wrapper";
+        burgerBtn.insertAdjacentElement("beforebegin", wrapper);
+        wrapper.appendChild(burgerBtn);
+      }
+
+      // Move lang button below burger
+      wrapper.appendChild(mobileLangBtn);
+      mobileLangBtn.classList.add("mobile-below-burger");
+    } else {
+      // Remove wrapper and move button back to mobile menu
+      const wrapper = document.querySelector(".burger-lang-wrapper");
+      if (wrapper) {
+        headerContainer.appendChild(burgerBtn); // restore burger
+        wrapper.remove();
+      }
+      mobileMenu.appendChild(mobileLangBtn);
+      mobileLangBtn.classList.remove("mobile-below-burger");
+    }
+  }
+
+  // Run on load & resize
+  window.addEventListener("load", updateMobileLangButton);
+  window.addEventListener("resize", updateMobileLangButton);
 }
