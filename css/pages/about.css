@@ -181,7 +181,7 @@
 
 .badge__image,
 .badge__image img {
-  height: var(--image-lg);
+  height: var(--image-AAT);
   margin: 0 auto var(--space-sm);
   border-radius: var(--radius-sm);
 }
