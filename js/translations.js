@@ -26,7 +26,7 @@ const translations = {
     about_badges_title: "Licensed, Regulated & Fully Insured",
     badge_aat_title: "Licensed and Regulated",
     badge_aat_desc:
-      "Licensed and regulated through the Association of Accounting Technicians (AAT).",
+      "Licensed and regulated by AAT under licence number 1009545.",
     badge_aml_title: "Anti Money Laundering",
     badge_aml_desc:
       "Supervised under the Money Laundering Regulations by the Association of Accounting Technicians.",
@@ -189,7 +189,7 @@ const translations = {
     about_badges_title: "Engedélyezett, felügyelt és biztosított",
     badge_aat_title: "Licensed and Regulated",
     badge_aat_desc:
-      "Az Association of Accounting Technicians (AAT) által engedélyezett és szabályozott könyvelő.",
+      "AAT által engedélyezett és szabályozott, engedélyszám: 1009545.",
     badge_aml_title: "Anti Money Laundering",
     badge_aml_desc:
       "Az AAT felügyelete alatt állok a pénzmosás elleni jogszabályoknak megfelelően.",
@@ -198,7 +198,7 @@ const translations = {
       "Teljes körű szakmai felelősségbiztosítással rendelkezem az Ön biztonsága érdekében.",
     badge_ico_title: "Data Protection",
     badge_ico_desc:
-      "Regisztrálva az Információs Biztos Hivatalánál (ICO) az adatvédelmi jogszabályok szerint.",
+      "Regisztrálva vagyok az Information Commissioner’s Office - nál (ICO) az adatvédelmi jogszabályok szerint.",
 
     services_title: "Könyvelési szolgáltatások",
     services_subtitle:
