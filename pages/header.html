@@ -10,16 +10,24 @@
       <h1>ANNA'S ACCOUNTING SERVICES</h1>
 
       <!-- Burger (mobile only) -->
-      <button
-        class="burger"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="mobile-controls">
+        <button
+          class="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <button
+          id="lang-toggle-mobile"
+          class="lang-button lang-under-burger"
+          aria-label="Change language"
+        ></button>
+      </div>
     </div>
 
     <!-- Desktop nav -->
@@ -56,5 +64,4 @@
     data-i18n="header_contact"
     data-page="contact"
   ></button>
-  <button id="lang-toggle-mobile" class="menu btn lang-button"></button>
 </nav>
